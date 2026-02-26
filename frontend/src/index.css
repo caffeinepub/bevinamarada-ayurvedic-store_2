@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+
+    /* Ayurvedic Green/Brown Palette */
+    --background: 0.97 0.012 95;
+    --foreground: 0.22 0.04 60;
+
+    --card: 0.99 0.008 90;
+    --card-foreground: 0.22 0.04 60;
+
+    --popover: 0.99 0.008 90;
+    --popover-foreground: 0.22 0.04 60;
+
+    /* Primary: Deep Forest Green */
+    --primary: 0.38 0.1 145;
+    --primary-foreground: 0.98 0.005 90;
+
+    /* Secondary: Warm Earthy Brown */
+    --secondary: 0.88 0.03 80;
+    --secondary-foreground: 0.32 0.06 55;
+
+    --muted: 0.92 0.018 90;
+    --muted-foreground: 0.52 0.04 70;
+
+    /* Accent: Golden Turmeric */
+    --accent: 0.85 0.08 85;
+    --accent-foreground: 0.28 0.06 55;
+
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 0.98 0.005 90;
+
+    --border: 0.86 0.025 85;
+    --input: 0.88 0.02 88;
+    --ring: 0.42 0.1 145;
+
+    /* Chart colors - earthy tones */
+    --chart-1: 0.52 0.14 145;
+    --chart-2: 0.58 0.12 55;
+    --chart-3: 0.65 0.1 85;
+    --chart-4: 0.45 0.08 30;
+    --chart-5: 0.72 0.09 120;
+
+    /* Sidebar */
+    --sidebar: 0.26 0.06 145;
+    --sidebar-foreground: 0.92 0.02 90;
+    --sidebar-primary: 0.72 0.14 145;
+    --sidebar-primary-foreground: 0.98 0.005 90;
+    --sidebar-accent: 0.32 0.07 145;
+    --sidebar-accent-foreground: 0.92 0.02 90;
+    --sidebar-border: 0.32 0.06 145;
+    --sidebar-ring: 0.55 0.12 145;
+
+    /* Custom Ayurvedic tokens */
+    --green-deep: 0.28 0.09 145;
+    --green-mid: 0.42 0.12 145;
+    --green-light: 0.62 0.1 145;
+    --brown-deep: 0.32 0.07 55;
+    --brown-mid: 0.52 0.08 60;
+    --brown-light: 0.72 0.06 70;
+    --gold: 0.78 0.12 85;
+    --cream: 0.97 0.015 90;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .ayurvedic-gradient {
+    background: linear-gradient(135deg, oklch(0.28 0.09 145) 0%, oklch(0.38 0.1 145) 50%, oklch(0.32 0.07 55) 100%);
+  }
+
+  .hero-overlay {
+    background: linear-gradient(to bottom, oklch(0.18 0.06 145 / 0.7) 0%, oklch(0.22 0.07 145 / 0.85) 100%);
+  }
+
+  .leaf-pattern {
+    background-image: url('/assets/generated/herbs-texture.dim_800x400.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Revert to previous version — undo recent changes",
+  "requirements": [
+    {
+      "id": "REQ-26",
+      "summary": "Revert Admin Dashboard page to pre-Version-2 state with original rounded summary cards and layout",
+      "acceptanceCriteria": [
+        "Admin Dashboard page visually matches the state from before the Version 2 deployment.",
+        "Summary cards (Today's Income, Monthly Income, Total Income, Total Products, Out of Stock, Total Enquiries) render with the same layout, colors, and icons as the prior version.",
+        "No new UI elements introduced in Version 2 remain on the dashboard page.",
+        "Low-stock alerts section is present and functional as before."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/AdminDashboardPage.tsx",
+          "operation": "modify",
+          "description": "Revert to the previous implementation before Version 2 deployment. Restore the original stat card layout, styling, and structure including rounded summary cards for Today's Income, Monthly Income, Total Income, Total Products, Out of Stock, and Total Enquiries with their previous colors and icons. Remove any Version-2-specific UI enhancements such as charts, graphs, or redesigned card layouts. Ensure low-stock alerts section remains as it was in the prior version."
+        }
+      ]
+    },
+    {
+      "id": "REQ-27",
+      "summary": "Revert AdminSidebar to pre-Version-2 state with original navigation, icons, and mobile behavior",
+      "acceptanceCriteria": [
+        "AdminSidebar navigation items match the prior version (Dashboard, Products, Sales, Enquiries, Logout).",
+        "Mobile collapse behavior (bottom nav or slide-out drawer) matches the prior implementation.",
+        "No extra navigation items (e.g., Customers, Settings, Reports) added in Version 2 remain.",
+        "Sidebar styling and icon set match the pre-Version-2 state."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/AdminSidebar.tsx",
+          "operation": "modify",
+          "description": "Revert to the previous implementation before Version 2 deployment. Restore the original sidebar navigation structure with Dashboard, Products, Sales, Enquiries, and Logout links using the prior icon set. Remove any additional navigation items (Customers, Settings, Reports, etc.) introduced in Version 2. Restore the previous mobile menu behavior (hamburger menu with slide-out drawer or bottom navigation) and all styling to match the pre-Version-2 state."
+        }
+      ]
+    },
+    {
+      "id": "REQ-28",
+      "summary": "Revert AdminProductsPage to pre-Version-2 state with original product list layout and action buttons",
+      "acceptanceCriteria": [
+        "Product list renders as it did before Version 2 (table or card layout matching prior state).",
+        "Status badges (In Stock, Out of Stock, Low Stock) appear with the same styling as before.",
+        "Add, Edit, Delete, and stock update actions function identically to the prior version.",
+        "No Version-2-specific redesign elements remain on this page."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/AdminProductsPage.tsx",
+          "operation": "modify",
+          "description": "Revert to the previous implementation before Version 2 deployment. Restore the original product list layout (table or card structure as it was before), status badges styling (In Stock, Out of Stock, Low Stock), and all action buttons (Add, Edit, Delete, stock updates) with their previous functionality and UI. Remove any Version-2-specific redesign elements such as new sorting options, filters, bulk actions, or layout changes. Ensure modal dialogs for product CRUD operations match the prior implementation."
+        }
+      ]
+    },
+    {
+      "id": "REQ-29",
+      "summary": "Revert global CSS and Tailwind config to pre-Version-2 Ayurvedic theme tokens",
+      "acceptanceCriteria": [
+        "Color tokens in index.css and tailwind.config.js match the state prior to Version 2.",
+        "All customer-facing and admin pages render with the original Ayurvedic green/brown palette.",
+        "No dark mode or new color variable overrides introduced in Version 2 remain active.",
+        "Typography and font settings match the prior version."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Revert to the previous implementation before Version 2 deployment. Restore the original Ayurvedic color tokens and CSS custom properties as they existed in the prior version. Remove any dark mode variables, new color overrides, or theme changes introduced in Version 2. Ensure the green/brown Ayurvedic palette is restored. Revert any typography or font setting changes to match the pre-Version-2 state."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Revert to the previous implementation before Version 2 deployment. Restore the original Ayurvedic custom color tokens, font families, shadows, border radii, and animation keyframes as they existed in the prior version. Remove any dark mode theme extensions, new color variables, or configuration changes introduced in Version 2. Ensure all Tailwind theme settings match the pre-Version-2 state."
+        }
+      ]
+    }
+  ]
+}

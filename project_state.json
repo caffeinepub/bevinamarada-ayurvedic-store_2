@@ -1,0 +1,340 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 7,
+  "summary": "Complete website and business management system for Bevinamarada Ayurvedic Store. Includes a customer-facing website (Home, About, Products, Contact pages) with Ayurvedic dark green/brown theme, and a secure admin dashboard styled like a modern pharmacy management UI. Dashboard features rounded summary cards with icons (Today's Income, Monthly Income, Total Income, Total Products, Out of Stock, Total Enquiries), a sales line chart with Daily/Monthly toggle, and a mobile-friendly product table with status badges. Admin navigation uses a sidebar/bottom nav with icons for Dashboard, Products, Sales, Reports, Customers, Enquiries, Settings, and Logout. Customer-facing pages have a green header, Call/WhatsApp buttons, card-based product grid, and contact form. Mobile-first, clean sans-serif typography, no clutter, fast loading. Optional dark mode for admin panel.",
+  "architectural_notes": [
+    "Mobile-first design; admin must be fully usable on mobile devices",
+    "Green/brown Ayurvedic theme inspired by Neem (Bevinamarada)",
+    "Two user roles: Admin (full access, login required) and Customer (read-only, no login)",
+    "SEO-friendly, fast-loading, secure admin panel, easy to upgrade",
+    "Admin dashboard uses pharmacy-style UI: rounded cards with icons, sales line chart (Daily/Monthly toggle), pill badges for stock status (green/red/orange)",
+    "Clean sans-serif typography throughout; no decorative fonts; large readable numbers and bold headings",
+    "Status colors: Green=In Stock/Profit, Red=Out of Stock/Alert, Orange=Low Stock Warning"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-design-and-apply-a-cohesive-ayurvedic-visual-theme-across-the-entire-site-earthy-green-and-brown-color-palette-inspired-by-neem-bevinamarada-natural-textures-serif-organic-typography-clean-trust-based-layout-and-consistent-mobile-first-responsive-design-throughout-all-pages-and-the-admin-panel",
+      "title": "Design and apply a cohesive Ayurvedic visual theme across the entire site: earthy green and brown color palette inspired by neem (Bevinamarada), natural textures, serif/organic typography, clean trust-based layout, and consistent mobile-first responsive design throughout all pages and the admin panel.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-customer-facing-home-page-include-a-hero-section-with-the-store-name-bevinamarada-ayurvedic-store-a-trust-welcome-message-a-brief-store-introduction-a-call-button-tel-link-a-whatsapp-chat-button-wa-me-link-and-a-featured-products-preview-section-showing-up-to-6-in-stock-products",
+      "title": "Build the customer-facing Home page. Include: a hero section with the store name 'Bevinamarada Ayurvedic Store', a trust/welcome message, a brief store introduction, a Call button (tel: link), a WhatsApp chat button (wa.me link), and a featured products preview section showing up to 6 in-stock products.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-customer-facing-about-us-page-include-owner-name-and-photo-placeholder-a-short-store-history-narrative-an-explanation-of-authentic-ayurveda-and-the-meaning-of-bevinamarada-neem-and-trust-building-content-about-the-store-s-mission",
+      "title": "Build the customer-facing About Us page. Include: owner name and photo placeholder, a short store history narrative, an explanation of authentic Ayurveda and the meaning of 'Bevinamarada' (Neem), and trust-building content about the store's mission.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-customer-facing-products-page-display-all-non-hidden-products-in-a-responsive-grid-each-product-card-must-show-product-image-or-placeholder-name-category-price-short-description-and-a-clearly-labeled-badge-green-in-stock-or-red-out-of-stock-include-a-category-filter-bar-and-a-search-input-to-filter-products-by-name",
+      "title": "Build the customer-facing Products page. Display all non-hidden products in a responsive grid. Each product card must show: product image (or placeholder), name, category, price, short description, and a clearly labeled badge — green '✅ In Stock' or red '❌ Out of Stock'. Include a category filter bar and a search input to filter products by name.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-customer-facing-contact-page-include-phone-number-display-with-click-to-call-link-whatsapp-chat-link-store-address-text-a-google-maps-embed-placeholder-iframe-static-embed-url-for-the-store-location-and-an-enquiry-form-with-fields-name-phone-message-and-optional-product-of-interest-submitting-the-form-calls-the-submitenquiry-backend-function",
+      "title": "Build the customer-facing Contact page. Include: phone number display with click-to-call link, WhatsApp chat link, store address text, a Google Maps embed placeholder iframe (static embed URL for the store location), and an enquiry form with fields: Name, Phone, Message, and optional Product of Interest. Submitting the form calls the submitEnquiry backend function.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-admin-login-page-provide-a-centered-login-form-with-username-and-password-fields-on-successful-login-store-the-session-token-in-localstorage-and-redirect-to-the-admin-dashboard-show-an-error-message-on-invalid-credentials-include-a-logout-button-accessible-from-all-admin-pages-that-clears-the-token-and-redirects-to-the-login-page",
+      "title": "Build the Admin Login page. Provide a centered login form with username and password fields. On successful login, store the session token in localStorage and redirect to the Admin Dashboard. Show an error message on invalid credentials. Include a logout button accessible from all admin pages that clears the token and redirects to the login page.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-admin-dashboard-overview-page-display-summary-cards-for-today-s-income-monthly-income-total-income-total-products-out-of-stock-products-count-and-total-enquiries-below-the-cards-show-a-low-stock-alerts-section-listing-products-at-or-below-the-low-stock-threshold-with-their-current-quantities",
+      "title": "Build the Admin Dashboard Overview page. Display summary cards for: Today's Income, Monthly Income, Total Income, Total Products, Out of Stock Products count, and Total Enquiries. Below the cards, show a Low Stock Alerts section listing products at or below the low stock threshold with their current quantities.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-admin-product-management-page-display-a-table-list-of-all-products-including-hidden-ones-with-columns-name-category-price-stock-quantity-status-hidden-flag-and-actions-provide-an-add-product-form-modal-name-category-price-stockquantity-description-imageurl-ishidden-an-edit-product-modal-pre-filled-with-existing-data-a-delete-confirmation-and-a-quick-stock-update-inline-input-the-ishidden-toggle-allows-hiding-out-of-stock-products-from-the-customer-facing-site",
+      "title": "Build the Admin Product Management page. Display a table/list of all products (including hidden ones) with columns: Name, Category, Price, Stock Quantity, Status, Hidden flag, and Actions. Provide: an Add Product form/modal (name, category, price, stockQuantity, description, imageUrl, isHidden), an Edit Product modal pre-filled with existing data, a Delete confirmation, and a quick Stock Update inline input. The isHidden toggle allows hiding out-of-stock products from the customer-facing site.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-admin-sales-income-report-page-provide-three-tabs-daily-report-select-a-date-list-all-sales-for-that-day-with-product-name-quantity-unit-price-total-and-a-day-total-monthly-report-select-year-month-list-daily-subtotals-and-a-month-grand-total-and-product-wise-report-list-all-products-with-total-units-sold-and-total-revenue-include-a-record-sale-form-to-log-a-new-sale-select-product-quantity-customer-name-optional-phone-optional",
+      "title": "Build the Admin Sales & Income Report page. Provide three tabs: Daily Report (select a date, list all sales for that day with product name, quantity, unit price, total, and a day total), Monthly Report (select year+month, list daily subtotals and a month grand total), and Product-wise Report (list all products with total units sold and total revenue). Include a Record Sale form to log a new sale: select product, quantity, customer name (optional), phone (optional).",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-the-admin-customer-enquiries-page-display-a-list-of-all-submitted-enquiries-with-customer-name-phone-message-product-of-interest-if-any-submission-timestamp-and-read-unread-status-admin-can-mark-an-enquiry-as-read-and-delete-it-highlight-unread-enquiries-visually",
+      "title": "Build the Admin Customer Enquiries page. Display a list of all submitted enquiries with: customer name, phone, message, product of interest (if any), submission timestamp, and read/unread status. Admin can mark an enquiry as read and delete it. Highlight unread enquiries visually.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-site-wide-navigation-header-for-the-customer-facing-pages-home-products-about-contact-that-collapses-to-a-hamburger-menu-on-mobile-add-a-persistent-footer-with-the-store-name-phone-number-whatsapp-link-and-a-link-to-the-admin-login",
+      "title": "Create a site-wide navigation header for the customer-facing pages (Home, Products, About, Contact) that collapses to a hamburger menu on mobile. Add a persistent footer with the store name, phone number, WhatsApp link, and a link to the Admin Login.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-sidebar-navigation-for-the-admin-panel-with-links-to-dashboard-overview-product-management-sales-income-reports-and-customer-enquiries-the-sidebar-should-collapse-to-a-bottom-navigation-bar-or-slide-out-drawer-on-mobile",
+      "title": "Create a sidebar navigation for the admin panel with links to: Dashboard Overview, Product Management, Sales & Income Reports, and Customer Enquiries. The sidebar should collapse to a bottom navigation bar or slide-out drawer on mobile.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-redesign-the-admin-dashboard-overview-page-admindashboardpage-tsx-with-rounded-summary-cards-featuring-icon-on-the-left-large-bold-number-small-label-text-dark-green-background-with-white-text-and-a-2-column-grid-on-mobile-cards-must-cover-today-s-income-monthly-income-total-income-total-products-out-of-stock-products-and-total-enquiries-cards-should-use-consistent-spacing-subtle-drop-shadows-and-rounded-corners-matching-a-modern-pharmacy-dashboard-aesthetic",
+      "title": "Redesign the Admin Dashboard Overview page (AdminDashboardPage.tsx) with rounded summary cards featuring: icon on the left, large bold number, small label text, dark green background with white text, and a 2-column grid on mobile. Cards must cover: Today's Income, Monthly Income, Total Income, Total Products, Out of Stock Products, and Total Enquiries. Cards should use consistent spacing, subtle drop shadows, and rounded corners matching a modern pharmacy dashboard aesthetic.",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-revert-the-admin-dashboard-page-admindashboardpage-tsx-to-its-previous-implementation-before-the-last-deployment-version-2-restore-the-original-rounded-summary-cards-layout-and-all-dashboard-content-exactly-as-it-appeared-prior-to-the-most-recent-changes",
+      "title": "Revert the Admin Dashboard page (AdminDashboardPage.tsx) to its previous implementation before the last deployment (Version 2). Restore the original rounded summary cards, layout, and all dashboard content exactly as it appeared prior to the most recent changes.",
+      "reqIds": [
+        "REQ-26"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-revert-the-adminsidebar-component-adminsidebar-tsx-to-its-previous-implementation-restore-the-original-sidebar-navigation-links-icons-mobile-behavior-and-styling-exactly-as-they-existed-before-the-most-recent-deployment",
+      "title": "Revert the AdminSidebar component (AdminSidebar.tsx) to its previous implementation. Restore the original sidebar navigation links, icons, mobile behavior, and styling exactly as they existed before the most recent deployment.",
+      "reqIds": [
+        "REQ-27"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-revert-the-adminproductspage-tsx-to-its-previous-implementation-before-version-2-restore-the-original-product-list-layout-card-table-structure-status-badges-and-action-buttons-exactly-as-they-appeared-before-the-most-recent-changes",
+      "title": "Revert the AdminProductsPage.tsx to its previous implementation before Version 2. Restore the original product list layout, card/table structure, status badges, and action buttons exactly as they appeared before the most recent changes.",
+      "reqIds": [
+        "REQ-28"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-revert-the-global-css-and-tailwind-configuration-frontend-src-index-css-and-frontend-tailwind-config-js-to-their-prior-state-before-version-2-restore-the-original-ayurvedic-color-tokens-typography-settings-and-theme-variables",
+      "title": "Revert the global CSS and Tailwind configuration (frontend/src/index.css and frontend/tailwind.config.js) to their prior state before Version 2. Restore the original Ayurvedic color tokens, typography settings, and theme variables.",
+      "reqIds": [
+        "REQ-29"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Secure admin login (username & password, owner-only access)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Admin dashboard overview: today's income, monthly income, total income, total products, out-of-stock count, total enquiries/orders",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Product management: add/edit/delete products with name, category, price, stock quantity, auto In Stock/Out of Stock status, hide out-of-stock option",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Sales & income reports: daily, monthly, product-wise; optional Excel/PDF download",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Customer data management: name, phone, order/enquiry history, repeat customers list",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Low stock alert when quantity falls below a defined threshold (e.g., 5)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Customer-facing Home page: Ayurvedic theme, store intro, trust message, Call & WhatsApp buttons",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "About Us page: owner details, store history, Authentic Ayurveda explanation",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Products page: product list with images, price, description, In Stock / Out of Stock labels",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Contact page: phone, WhatsApp, address, Google Map embed, enquiry form",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Implement a backend data model and storage for Products. Each product must store: id, name, category, price (numeric), stockQuantity (Nat), description, imageUrl, isHidden (Bool), and a derived status (In Stock when stockQuantity > 0, Out of Stock when 0). Expose CRUD operations: createProduct, updateProduct, deleteProduct, getProducts (with optional hideOutOfStock filter), getProductById.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-13",
+      "summary": "Implement a backend data model and storage for Customer Enquiries. Each enquiry must store: id, customerName, phone, message, productId (optional), timestamp, and isRead flag. Expose: submitEnquiry (public), getEnquiries (admin), markEnquiryRead (admin), deleteEnquiry (admin).",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-14",
+      "summary": "Implement a backend data model and storage for Sales Records. Each sale must store: id, productId, productName, quantitySold, pricePerUnit, totalAmount, customerName (optional), phone (optional), saleDate (timestamp). Expose: recordSale (admin), getSalesByDate (admin, filter by day), getSalesByMonth (admin, filter by year+month), getSalesByProduct (admin), getTotalIncome, getTodayIncome, getMonthlyIncome.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-15",
+      "summary": "Implement a secure admin authentication system in the backend. Store a single admin credential (username + hashed password). Expose: adminLogin(username, password) returning a session token, validateToken(token) returning Bool, and changePassword(token, newPassword). The session token must be checked on all admin-only backend calls.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-16",
+      "summary": "Implement a low-stock alert system in the backend. Store a configurable lowStockThreshold (default: 5). Expose: getLowStockProducts() returning all products where stockQuantity > 0 AND stockQuantity <= threshold, setLowStockThreshold(token, value) for admin.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-17",
+      "summary": "Redesign admin dashboard UI: rounded summary cards with icons (left icon, big number, small label, green bg/white text, 2-per-row on mobile), sales line chart with Daily/Monthly toggle (smooth green curve, minimal grid), mobile-friendly product table with status pill badges, bottom nav/slide menu for mobile with medical-style icons",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-18",
+      "summary": "Add Orange 'Low Stock Warning' status color and badge in addition to Green (In Stock) and Red (Out of Stock) across product lists and dashboard alerts",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-19",
+      "summary": "Add optional dark mode for admin dashboard with smooth light/dark transition; light mode as default",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-20",
+      "summary": "Expand admin sidebar navigation to include: Customers, Settings, and Logout in addition to existing Dashboard, Products, Sales, Reports, Enquiries",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-22",
+      "summary": "Add a sales line chart section below the summary cards on the Admin Dashboard page. The chart must show a smooth curved green line on a white/light background with minimal grid lines. Include a toggle to switch between Daily and Monthly views. Use a lightweight charting library (e.g., Recharts) already available or via compatible import. The chart title should read 'Sales Performance'.",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-23",
+      "summary": "Redesign the Admin Products page (AdminProductsPage.tsx) product list as mobile-friendly cards (not a raw HTML table). Each card/row must show: product image thumbnail on the left, bold product name, price, stock quantity, a pill-shaped status badge (green '✅ In Stock', red '❌ Out of Stock', orange '⚠️ Low Stock'), and action icons for Edit and Delete on the right. On desktop, render as a table-style list; on mobile, render as stacked cards.",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-24",
+      "summary": "Add an orange 'Low Stock' pill badge (e.g., '⚠️ Low Stock') across all product lists and dashboard alert sections. A product should show this badge when its stockQuantity is greater than 0 but at or below the configured lowStockThreshold. This badge must appear in the Admin Products page, the Admin Dashboard low-stock alerts section, and wherever product status is displayed.",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-25",
+      "summary": "Redesign the AdminSidebar component to expand navigation items to include: Dashboard, Products, Sales, Reports, Customers, Enquiries, Settings, and Logout. Each item must have a simple medical/health-style icon. On mobile, the sidebar must collapse into a bottom navigation bar with icon + label, or a slide-out drawer. On desktop, render as a full left sidebar. Logout must clear identity/session and redirect to the login page.",
+      "reqIds": [
+        "REQ-22"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-26",
+      "summary": "Apply a consistent global color token update across the entire app to enforce the Ayurvedic pharmacy color system: Primary dark green (#1a5c2a or equivalent OKLCH) for headers, cards, and primary actions; light green for card highlights and secondary elements; white for page backgrounds; soft grey (#e5e7eb) for borders and dividers; brown accents for decorative elements; orange (#f97316 or equivalent) for low-stock warnings; red for out-of-stock and alerts; green for in-stock and profit indicators. Update frontend/src/index.css and tailwind.config.js color tokens accordingly. Typography must use a clean sans-serif font (Inter or system-ui), with large readable numbers and bold headings.",
+      "reqIds": [
+        "REQ-23"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-27",
+      "summary": "Add an optional dark mode for the admin dashboard (admin layout and all admin pages). Light mode must be the default. The dark mode toggle should be accessible from the admin sidebar or top bar. In dark mode, backgrounds shift to dark slate/charcoal, text to white/light grey, cards to dark green variants, and borders to dark grey. The transition between modes must be smooth (CSS transition). Use the existing CSS custom property system in index.css to define dark mode overrides.",
+      "reqIds": [
+        "REQ-24"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-28",
+      "summary": "Redesign all customer-facing pages (Home, Products, Contact) to strictly follow the specified mobile-first UX rules: big tappable buttons (minimum 48px height), one-hand usable layout with primary actions within thumb reach, no visual clutter, fast-rendering card components. On the Home page, the header must be green with the store name and tagline 'Authentic Ayurvedic Medicines', with prominent Call and WhatsApp buttons. On the Products page, ensure card layout with image, name, price, and stock badge. On the Contact page, Call and WhatsApp buttons must be large and immediately visible, followed by the Google Maps embed and enquiry form.",
+      "reqIds": [
+        "REQ-25"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Bevinamarada Ayurvedic Store",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

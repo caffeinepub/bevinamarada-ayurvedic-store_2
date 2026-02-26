@@ -1,0 +1,9 @@
+{
+  "frontend/src/pages/AdminProductsPage.tsx": "Admin product management page with searchable product list, inline stock update, and modals for adding, editing, and deleting products including a hidden/visible toggle. Rounded card styling restored to pre-Version-2 state.",
+  "frontend/src/pages/AdminSalesPage.tsx": "Admin sales and income report page with three tabs (Daily, Monthly, Product-wise) and a Record Sale modal for logging new transactions.",
+  "frontend/src/pages/AdminEnquiriesPage.tsx": "Admin customer enquiries page displaying all submitted enquiries with unread highlighting, filter tabs (all/unread/read), mark-as-read, and delete with confirmation.",
+  "frontend/src/index.css": "Global styles with the original Ayurvedic green/brown OKLCH color palette, Lora/Open Sans fonts, and utility classes. Dark mode section removed to restore pre-Version-2 state.",
+  "frontend/tailwind.config.js": "Tailwind configuration with Ayurvedic custom color tokens, Lora/Open Sans font families, and animation keyframes. Dark mode class strategy removed to restore pre-Version-2 state.",
+  "frontend/src/pages/AdminDashboardPage.tsx": "Admin dashboard with income stats (Today/Monthly/Total), store overview cards (Products/Out of Stock/Enquiries), low-stock alerts, and threshold settings. Dark mode class references removed and rounded card styling restored.",
+  "frontend/src/components/AdminSidebar.tsx": "Admin sidebar with Dashboard, Products, Sales & Income, and Enquiries navigation plus Logout. Includes desktop sidebar and mobile hamburger drawer — no extra nav items from Version 2."
+}

@@ -1,0 +1,86 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-revert-the-admin-dashboard-page-admindashboardpage-tsx-to-its-previous-implementation-before-the-last-deployment-version-2-restore-the-original-rounded-summary-cards-layout-and-all-dashboard-content-exactly-as-it-appeared-prior-to-the-most-recent-changes",
+      "featureTitle": "Revert the Admin Dashboard page (AdminDashboardPage.tsx) to its previous implementation before the last deployment (Version 2). Restore the original rounded summary cards, layout, and all dashboard content exactly as it appeared prior to the most recent changes.",
+      "files": [
+        "frontend/src/pages/AdminDashboardPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-26"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-revert-the-adminsidebar-component-adminsidebar-tsx-to-its-previous-implementation-restore-the-original-sidebar-navigation-links-icons-mobile-behavior-and-styling-exactly-as-they-existed-before-the-most-recent-deployment",
+      "featureTitle": "Revert the AdminSidebar component (AdminSidebar.tsx) to its previous implementation. Restore the original sidebar navigation links, icons, mobile behavior, and styling exactly as they existed before the most recent deployment.",
+      "files": [
+        "frontend/src/components/AdminSidebar.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-27"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-revert-the-adminproductspage-tsx-to-its-previous-implementation-before-version-2-restore-the-original-product-list-layout-card-table-structure-status-badges-and-action-buttons-exactly-as-they-appeared-before-the-most-recent-changes",
+      "featureTitle": "Revert the AdminProductsPage.tsx to its previous implementation before Version 2. Restore the original product list layout, card/table structure, status badges, and action buttons exactly as they appeared before the most recent changes.",
+      "files": [
+        "frontend/src/pages/AdminProductsPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-28"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-revert-the-global-css-and-tailwind-configuration-frontend-src-index-css-and-frontend-tailwind-config-js-to-their-prior-state-before-version-2-restore-the-original-ayurvedic-color-tokens-typography-settings-and-theme-variables",
+      "featureTitle": "Revert the global CSS and Tailwind configuration (frontend/src/index.css and frontend/tailwind.config.js) to their prior state before Version 2. Restore the original Ayurvedic color tokens, typography settings, and theme variables.",
+      "files": [
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-29"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

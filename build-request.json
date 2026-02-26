@@ -1,0 +1,100 @@
+{
+  "kind": "build_request",
+  "title": "Revert to previous version — undo recent changes",
+  "projectName": "Bevinamarada Ayurvedic Store",
+  "priority": "high",
+  "requirements": [
+    {
+      "id": "REQ-26",
+      "text": "Revert the Admin Dashboard page (AdminDashboardPage.tsx) to its previous implementation before the last deployment (Version 2). Restore the original rounded summary cards, layout, and all dashboard content exactly as it appeared prior to the most recent changes.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "You don't change anything. Please change as previous script chat"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Admin Dashboard page visually matches the state from before the Version 2 deployment.",
+        "Summary cards (Today's Income, Monthly Income, Total Income, Total Products, Out of Stock, Total Enquiries) render with the same layout, colors, and icons as the prior version.",
+        "No new UI elements introduced in Version 2 remain on the dashboard page.",
+        "Low-stock alerts section is present and functional as before."
+      ]
+    },
+    {
+      "id": "REQ-27",
+      "text": "Revert the AdminSidebar component (AdminSidebar.tsx) to its previous implementation. Restore the original sidebar navigation links, icons, mobile behavior, and styling exactly as they existed before the most recent deployment.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "You don't change anything. Please change as previous script chat"
+        ]
+      },
+      "acceptanceCriteria": [
+        "AdminSidebar navigation items match the prior version (Dashboard, Products, Sales, Enquiries, Logout).",
+        "Mobile collapse behavior (bottom nav or slide-out drawer) matches the prior implementation.",
+        "No extra navigation items (e.g., Customers, Settings, Reports) added in Version 2 remain.",
+        "Sidebar styling and icon set match the pre-Version-2 state."
+      ]
+    },
+    {
+      "id": "REQ-28",
+      "text": "Revert the AdminProductsPage.tsx to its previous implementation before Version 2. Restore the original product list layout, card/table structure, status badges, and action buttons exactly as they appeared before the most recent changes.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "You don't change anything. Please change as previous script chat"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Product list renders as it did before Version 2 (table or card layout matching prior state).",
+        "Status badges (In Stock, Out of Stock, Low Stock) appear with the same styling as before.",
+        "Add, Edit, Delete, and stock update actions function identically to the prior version.",
+        "No Version-2-specific redesign elements remain on this page."
+      ]
+    },
+    {
+      "id": "REQ-29",
+      "text": "Revert the global CSS and Tailwind configuration (frontend/src/index.css and frontend/tailwind.config.js) to their prior state before Version 2. Restore the original Ayurvedic color tokens, typography settings, and theme variables.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "You don't change anything. Please change as previous script chat"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Color tokens in index.css and tailwind.config.js match the state prior to Version 2.",
+        "All customer-facing and admin pages render with the original Ayurvedic green/brown palette.",
+        "No dark mode or new color variable overrides introduced in Version 2 remain active.",
+        "Typography and font settings match the prior version."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify any files under frontend/src/hooks/ (immutable paths).",
+    "Do not modify frontend/src/main.tsx or frontend/src/components/ui/ (immutable paths).",
+    "Do not alter any backend Motoko logic.",
+    "Revert only to the state that existed before the Version 2 deployment — do not introduce any new features."
+  ],
+  "nonGoals": [
+    "Adding any new features or UI enhancements.",
+    "Introducing dark mode or sales charts.",
+    "Modifying backend data models or API endpoints.",
+    "Changing the routing structure in App.tsx beyond what is required to match the prior state."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}
